@@ -1,22 +1,44 @@
-# LAB - Class 26
-## Project: Intro to Django
+# LAB - Class 27
+## Project: Django Models
 #### Author: Faustino Marco Simpliciano
 
 ### Links and Resources
 - Development server: http://127.0.0.1:8000/
-- front-end application: "Snacks"
+- front-end application: "Snack Tracker"
 
 ### Feature Tasks & Requirements 08/23
-- Create web site in Django with 2 pages
-    - home page
-    - about page
-    - create views/urls/templates as needed for home and about pages
-    - use ancestor template to contain navigation elements
-    - Should be built the "Django Way"
-        - Match the structure of in-class demo
+- Build out a project with one model and wire up that model using Django Views.
+  - create snack_tracker_project
+  - crea
 
 ### Typical Steps to Start Django Project
 - create project
+  - `django-admin startproject name_name_name .`
+    - DON'T FORGET THE `.`
+  - `python manage.py runserver`
+    - if working, now migrate
+  - `python manage.py migrate`
+  - `python manage.py startapp name_`
+  -> views.py
+    - SEE VIEWS IN DEMOOOO
+  -> models.py
+    - `class N_ame(models.Model):`
+      - name = models.CharField(max_length=256)
+  - `python manage.py createsuperuser`
+    - usrnm
+    - email
+    - pswd
+  - go to admin path to login on dev server
+  - see admin.py
+    - `from .models import Snack`
+    - `admin.site.register(Snack)`
+  - `python manage.py showmigrations`
+    - `python manage.py makemigrations name_of_app`
+    - repeat show migrations cmd
+    - runserver
+    - use cmd to apply new migration
+  - create urls.py in app
+    - copy over from urls.py in project dir
 - define app
 - add app to project
 - add views
